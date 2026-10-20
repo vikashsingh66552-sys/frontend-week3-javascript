@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="An interactive daily wellness dashboard built with HTML, CSS and JavaScript.">
+  <title>Daylight | Your Daily Reset</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="brand" href="#home"><span class="brand-mark">✦</span> daylight</a>
+      <button class="menu-toggle" aria-expanded="false" aria-label="Toggle navigation">☰</button>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li><li><a href="#habits">Daily habits</a></li><li><a href="#journal">Journal</a></li>
+      </ul>
+      <button class="theme-toggle" type="button" aria-label="Toggle dark theme">◐</button>
+    </nav>
+  </header>
+  <main id="home">
+    <section class="hero container">
+      <div>
+        <p class="eyebrow"><span class="live-dot"></span> YOUR SPACE TO RESET</p>
+        <h1>A little progress<br>goes a <span>long way.</span></h1>
+        <p class="intro">Make room for the small things that help you feel more like yourself. One gentle step at a time.</p>
+        <a class="button" href="#habits">Start today's reset <span>↓</span></a>
+      </div>
+      <aside class="date-card">
+        <p class="eyebrow">TODAY'S REMINDER</p>
+        <div class="sun-icon">☼</div>
+        <h2>You don't have to do it all.</h2>
+        <p>Just choose one good thing and begin.</p>
+        <button class="quote-button" id="quoteButton" type="button">Another reminder ↗</button>
+      </aside>
+    </section>
+
+    <section class="habits-section" id="habits">
+      <div class="container">
+        <div class="section-heading"><div><p class="eyebrow">SMALL STEPS, REAL MOMENTUM</p><h2>Your daily <span>reset.</span></h2></div><p id="progressText">0 of 4 habits complete</p></div>
+        <div class="progress-track" aria-label="Daily habit completion"><div class="progress-fill" id="progressFill"></div></div>
+        <div class="habit-grid">
+          <label class="habit-card"><input type="checkbox" class="habit-check"><span class="habit-symbol">☀</span><span class="habit-name">Get some sunlight</span><span class="habit-note">Step outside for a moment</span></label>
+          <label class="habit-card"><input type="checkbox" class="habit-check"><span class="habit-symbol">♧</span><span class="habit-name">Drink some water</span><span class="habit-note">Give your body a refresh</span></label>
+          <label class="habit-card"><input type="checkbox" class="habit-check"><span class="habit-symbol">⌁</span><span class="habit-name">Take a deep breath</span><span class="habit-note">Pause and reset your focus</span></label>
+          <label class="habit-card"><input type="checkbox" class="habit-check"><span class="habit-symbol">✎</span><span class="habit-name">Write one good thing</span><span class="habit-note">Notice something positive</span></label>
+        </div>
+        <p class="success-message" id="successMessage" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <section class="journal-section container" id="journal">
+      <div class="journal-intro"><p class="eyebrow">A MOMENT FOR YOU</p><h2>What's on your <span>mind?</span></h2><p>Write a thought, a goal, or one thing you want to remember today.</p></div>
+      <form class="journal-form" id="journalForm">
+        <label for="journalEntry">Your note</label>
+        <textarea id="journalEntry" rows="5" maxlength="500" placeholder="Today, I'm making space for..." required></textarea>
+        <div class="form-bottom"><span id="charCount">0 / 500</span><button class="button" type="submit">Save note ↗</button></div>
+        <p class="form-message" id="formMessage" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+  <footer><div class="container footer-inner"><a class="brand" href="#home"><span class="brand-mark">✦</span> daylight</a><p>A softer start, one day at a time.</p><p>© 2026 Daylight</p></div></footer>
+  <script src="script.js"></script>
+</body>
+</html>
